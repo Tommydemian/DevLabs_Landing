@@ -32,7 +32,7 @@ export const NavigationList: React.FC = (
   return (
     <ul
       role="list"
-      className="relative hidden items-start gap-6 text-[20px] text-nav-link max-md:mb-[7.5rem] md:flex md:flex-row md:items-center md:justify-center"
+      className="relative hidden items-start gap-8 text-[20px] text-nav-link max-md:mb-[7.5rem] md:ml-9 md:flex md:flex-row md:items-center md:justify-center"
     >
       {navLinks?.map((link) => {
         // const isActive = isActiveLink(link, pathname);

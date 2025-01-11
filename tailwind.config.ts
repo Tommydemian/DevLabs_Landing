@@ -7,6 +7,33 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontSize: {
+      micro: ["var(--fs-micro)", { lineHeight: "1.2" }],
+      xs: ["var(--fs-xs)", { lineHeight: "1.063rem" }],
+      "s-15": ["var(--fs-s-15)]", { lineHeight: "2rem" }],
+      "m-20": ["var(--fs-m-20)]", { lineHeight: "2rem" }],
+      "m-22": ["var(--fs-m-22)]", { lineHeight: "1.625rem" }],
+
+      // Semantic
+      "btn-desktop": ["var(--fs-m-20)", { lineHeight: "1.513rem" }],
+      "btn-mobile": ["var(--fs-m-18)", { lineHeight: "1.375rem" }],
+
+      "h1-desktop": ["var(--fs-xl)", { lineHeight: "4.375rem" }],
+      "h1-mobile": ["var(--fs-lg-32)", { lineHeight: "1" }],
+
+      "body-lg-desktop": ["var(--fs-m-22)", { lineHeight: "1.625rem" }],
+      "body-lg-mobile": ["var(--fs-s-15)", { lineHeight: "1.438rem" }],
+
+      "nav-action-desktop": ["var(--fs-xs)", { lineHeight: "1.063rem" }],
+
+      "feature-heading-desktop": ["var(--fs-lg-40)", { lineHeight: "2rem" }],
+      "feature-heading-mobile": ["var(--fs-lg-32)", { lineHeight: "1" }],
+      "feature-description-desktop": [
+        "var(--fs-s-15)",
+        { lineHeight: "1.563" },
+      ],
+      "feature-description-mobile": ["var(--fs-s-15)", { lineHeight: "1.563" }],
+    },
     extend: {
       fontFamily: {
         inter: ["var(--font-inter)"],
@@ -30,6 +57,17 @@ export default {
           "linear-gradient(86.05deg, #2a2559 -12.6%, #4c265a -12.6%, #8b51c0 187.74%)",
         "login-button":
           "linear-gradient(129.34deg,#1aeb90 -8.89%,#1ad19f 81.29%)",
+      },
+      padding: {
+        "nav-wrapper": "var(--nav-wrapper-padding)",
+        "section-block": "var(--section-padding-block)",
+        xl: "var(--size-64)",
+      },
+      margin: {},
+      space: {},
+      borderRadius: {
+        button: "var(--br-button)",
+        "nav-wrapper": "var(--br-nav-wrapper)",
       },
     },
   },

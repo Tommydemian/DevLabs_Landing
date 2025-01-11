@@ -1,11 +1,15 @@
-import React from "react";
+"use client";
 
-export const Logo = () => {
+import React from "react";
+import { useBreakpoint } from "@/app/hooks/useBreakpoint";
+
+export const BrandLogo = () => {
+  const isDesktop = useBreakpoint("(min-width: 768px)");
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="86"
-      height="63"
+      width={isDesktop ? "86" : "44.5"}
+      height={isDesktop ? "63" : "32.9"}
       fill="none"
       viewBox="0 0 86 63"
     >

@@ -1,18 +1,22 @@
 import React from "react";
-import { Container } from "../../ui/Container";
-import { Logo } from "./Logo";
+import { BrandLogo } from "../../ui/BrandLogo";
 import { NavigationWrapper } from "./NavigationWrapper";
 import { NavigationList } from "./NavigationList";
+import { NavigationActions } from "./NavigationActions";
+import { Container } from "../../ui/Container";
 
 type Props = {};
 
 export const Navigation = (props: Props) => {
   return (
     <nav>
-      <Container>
+      <Container lg>
         <NavigationWrapper>
-          <Logo />
-          <NavigationList />
+          <div className="flex">
+            <BrandLogo />
+            <NavigationList />
+          </div>
+          <NavigationActions />
         </NavigationWrapper>
       </Container>
     </nav>
