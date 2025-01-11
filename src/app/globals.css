@@ -4,18 +4,168 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+
+  /* Colors */
+  --clr-purple-300: #593f84;
+  --clr-purple-400: #3a265a;
+  --clr-purple-500: #2a2559;
+  --clr-green: #9cead1;
+  --clr-blue-400: #263a72;
+  --clr-white: #ffffff;
+  --clr-white-500: #f1f5f9;
+  --clr-black: #000000;
+  --clr-gray-300: #9c9c9c;
+  --clr-gray-400: #818181;
+
+  /* Contextual */
+  --clr-primary: var(--clr-purple-500);
+  --clr-action: var(--clr-purple-400);
+  --clr-accent: var(--clr-green);
+  --clr-tertiary: var(--clr-blue-400);
+  --clr-neutral-100: var(--clr-white);
+  --clr-neutral-500: var(--clr-gray-400);
+  --clr-neutral-900: var(--clr-black);
+
+  /* Semantic */
+  --color-heading-primary: var(--clr-primary);
+  --color-heading-secondary: var(--clr-black);
+  --color-nav-link: var(--clr-primary);
+  --color-text-body-primary: var(--clr-gray-400);
+  --color-text-body-secondary: var(--clr-tertiary);
+  --color-text-inverse: var(--clr-white);
+  --color-text-action: var(--clr-purple-400);
+
+  --color-surface-primary: var(--clr-white);
+  --color-surface-secondary: var(--clr-white-500);
+
+  --gradient-link: linear-gradient(191.27deg, #7b46a5 37.14%, #3a265a 180.24%);
+  --gradient-action: linear-gradient(90deg, #7b46a5 0%, #2f1b3f 100%);
+  --gradient-button: linear-gradient(
+    86.05deg,
+    #2a2559 -12.6%,
+    #4c265a -12.6%,
+    #8b51c0 187.74%
+  );
+  --gradient-login-button: linear-gradient(
+    129.34deg,
+    #1aeb90 -8.89%,
+    #1ad19f 81.29%
+  );
+
+  /* Typography */
+  --fs-xs: 0.625rem; /* 10px */
+  --fs-s-300: 0.875rem; /* 14px */
+  --fs-s-400: 0.938rem; /* 15px */
+  --fs-s-500: 1rem; /* 16px */
+  --fs-m-200: 1.125rem; /* 18px */
+  --fs-m-300: 1.25rem; /* 20px */
+  --fs-m-400: 1.375rem; /* 22px */
+  --fs-m-500: 1.5rem; /* 24px */
+  --fs-l-400: 2rem; /* 32px */
+  --fs-l-500: 2.5rem; /* 40px */
+  --fs-xl-400: 4rem; /* 64px */
+  --fs-xl-500: 4.063rem; /* 65px */
+
+  /* Line height */
+  --lh-xs: 0.756rem; /* 12.1px */
+  --lh-s: 1.361rem; /* 21.78px */
+  --lh-m: 1.438rem; /* 23px */
+  --lh-m-500: 1.563rem; /* 25px */
+  --lh-lg: 2rem; /* 32px */
+  --lh-xl-400: 4.125rem; /* 66px */
+  --lh-xl-500: 4.375rem; /* 70px */
+  --lh-xl-600: 4.625rem /* 74px */;
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
+  /* Css Reset */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    min-height: 100vh; /* fallback */
+    min-height: 100svh;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+  }
+
+  p {
+    /* base balance */
+    text-wrap: pretty;
+    max-width: 75ch;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 3rem;
+    }
+  }
+}
+
+@layer components {
+  /* Button */
+  .button-base {
+    @apply px-4 py-3 capitalize;
+  }
+  .button-primary {
+    @apply border-none bg-button-gradient text-inverse;
+  }
+  .button-secondary {
+    @apply border-2 border-action bg-transparent text-action;
+  }
+  .button-login {
+    @apply border-none bg-login-button text-heading-primary;
+  }
+
+  /* Container */
+  .container {
+    width: min(100% - 2rem, 82.5rem);
+    margin-inline: auto;
+  }
+
+  /* Typography */
+  .typography-h1 {
+    font-size: clamp(var(--fs-l-400), 8vw, var(--fs-xl-500));
+    line-height: clamp(2rem, 10vw, var(--lh-xl-500));
+    font-weight: 700;
+  }
+  /* @media screen and (min-width: 768px) {
+    .typography-h1 {
+      line-height: (var(--lh-xl-500));
+    }
+  } */
+  .typography-p {
+    font-size: var(--fs-m-400);
+    line-height: var(--lh-m-500);
+    font-weight: 500;
+  }
+  .typography-button {
+    font-size: var(--fs-m-300);
+    line-height: var(--lh-m-500);
+    font-weight: 600;
+  }
+}
+
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter);
 }
