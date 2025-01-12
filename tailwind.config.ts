@@ -11,6 +11,7 @@ export default {
       micro: ["var(--fs-micro)", { lineHeight: "1.2" }],
       xs: ["var(--fs-xs)", { lineHeight: "1.063rem" }],
       "s-15": ["var(--fs-s-15)]", { lineHeight: "2rem" }],
+      "m-16": ["1rem", { lineHeight: "1.438rem" }],
       "m-20": ["var(--fs-m-20)]", { lineHeight: "2rem" }],
       "m-22": ["var(--fs-m-22)]", { lineHeight: "1.625rem" }],
 
@@ -51,6 +52,11 @@ export default {
         action: "var(--color-text-action)",
         "surface-primary": "var(--color-surface-primary)",
         "surface-secondary": "var(--color-surface-secondary)",
+        "surface-task-card": {
+          DEFAULT: "hsla(0, 0%, 93%, 1)",
+          80: "hsla(0, 0%, 93%, 0.8)",
+          60: "hsla(0, 0%, 93%, 0.6)",
+        },
       },
       backgroundImage: {
         "link-gradient":
@@ -60,6 +66,8 @@ export default {
           "linear-gradient(86.05deg, #2a2559 -12.6%, #4c265a -12.6%, #8b51c0 187.74%)",
         "login-button":
           "linear-gradient(129.34deg,#1aeb90 -8.89%,#1ad19f 81.29%)",
+        "image-background":
+          "linear-gradient(138.74deg, #6EE0B3 -7.22%, #9CEAD1 56.33%, #40D695 108.73%)",
       },
       padding: {
         "nav-wrapper": "var(--nav-wrapper-padding)",
@@ -71,6 +79,9 @@ export default {
       borderRadius: {
         button: "var(--br-button)",
         "nav-wrapper": "var(--br-nav-wrapper)",
+      },
+      boxShadow: {
+        "task-card": "0 4px 4px 0 #00000040",
       },
     },
   },

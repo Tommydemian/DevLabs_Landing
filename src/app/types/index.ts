@@ -9,3 +9,10 @@ export type Feature = {
   description: string;
   href: string;
 };
+
+export type Tool = {
+  id: number;
+  title: string;
+  description: string;
+  href: string;
+};

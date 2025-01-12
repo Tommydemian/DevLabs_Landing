@@ -1,17 +1,15 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 // Components
-import { ChevronRight } from "lucide-react";
 import { FeatureContenWrapper } from "./FeatureContentWrapper";
 import { FeatureHeading } from "./FeatureHeading";
 import { FeatureDescription } from "./FeatureDescription";
+import { FeatureCTA } from "./FeatureCTA";
 import { PlayVideoIcon } from "../../icons/PlayVideo";
 // Utils
 import { cn } from "@/app/lib/utils/cn";
 // Types
 import type { Feature } from "@/app/types";
-import { relative } from "path";
 
 type FeatureCardProps = {
   feature: Feature;
@@ -39,15 +37,7 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({ feature, index }) => {
       <FeatureContenWrapper>
         <FeatureHeading>{title}</FeatureHeading>
         <FeatureDescription>{description}</FeatureDescription>
-        <Link
-          href={href}
-          className="link-gradient-text flex items-center text-s-15 md:text-m-20"
-        >
-          Learn More
-          <span>
-            <ChevronRight className="text-[#7B46A5]" />
-          </span>
-        </Link>
+        <FeatureCTA href={href} />
       </FeatureContenWrapper>
     </article>
   );

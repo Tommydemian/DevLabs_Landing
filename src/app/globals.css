@@ -14,6 +14,7 @@
   --clr-white: #ffffff;
   --clr-white-500: #f1f5f9;
   --clr-black: #000000;
+  --clr-gray-200: 0, 0%, 93%;
   --clr-gray-300: #9c9c9c;
   --clr-gray-400: #818181;
 
@@ -23,6 +24,7 @@
   --clr-accent: var(--clr-green);
   --clr-tertiary: var(--clr-blue-400);
   --clr-neutral-100: var(--clr-white);
+  --clr-neutral-200: var(--clr-gray-200);
   --clr-neutral-500: var(--clr-gray-400);
   --clr-neutral-900: var(--clr-black);
 
@@ -34,6 +36,8 @@
   --color-text-body-secondary: var(--clr-tertiary);
   --color-text-inverse: var(--clr-white);
   --color-text-action: var(--clr-purple-400);
+
+  --color-surface-task-card-hsl: var(--clr-gray-200);
 
   --color-surface-primary: var(--clr-white);
   --color-surface-secondary: var(--clr-white-500);
@@ -204,6 +208,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  .grid-temp-2 {
+    grid-template-columns: auto, auto;
   }
 }
 

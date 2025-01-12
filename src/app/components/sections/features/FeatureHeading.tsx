@@ -2,11 +2,17 @@ import React from "react";
 
 type FeatureHeadingProps = {
   children: React.ReactNode;
+  className?: string;
 };
 
-export const FeatureHeading: React.FC<FeatureHeadingProps> = ({ children }) => {
+export const FeatureHeading: React.FC<FeatureHeadingProps> = ({
+  children,
+  className,
+}) => {
   return (
-    <h2 className="text-feature-heading-mobile md:text-feature-heading-desktop font-bold capitalize text-black">
+    <h2
+      className={`text-black, text-feature-heading-mobile font-bold capitalize md:text-feature-heading-desktop ${className || ""}`}
+    >
       {children}
     </h2>
   );
