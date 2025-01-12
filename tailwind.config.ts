@@ -29,10 +29,13 @@ export default {
       "feature-heading-desktop": ["var(--fs-lg-40)", { lineHeight: "2rem" }],
       "feature-heading-mobile": ["var(--fs-lg-32)", { lineHeight: "1" }],
       "feature-description-desktop": [
-        "var(--fs-s-15)",
-        { lineHeight: "1.563" },
+        "var(--fs-m-20)",
+        { lineHeight: "1.563rem" },
       ],
-      "feature-description-mobile": ["var(--fs-s-15)", { lineHeight: "1.563" }],
+      "feature-description-mobile": [
+        "var(--fs-s-15)",
+        { lineHeight: "1.563rem" },
+      ],
     },
     extend: {
       fontFamily: {

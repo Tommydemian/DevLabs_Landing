@@ -15,8 +15,8 @@ export const Features = () => {
       </SectionHeading>
       <Container>
         <div className="grid grid-cols-1 gap-11 py-section-block md:gap-32">
-          {features.map((feat) => (
-            <FeatureCard feature={feat} key={feat.title} />
+          {features.map((feat, index) => (
+            <FeatureCard feature={feat} key={feat.title} index={index} />
           ))}
         </div>
       </Container>
