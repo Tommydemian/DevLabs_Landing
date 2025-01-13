@@ -12,6 +12,7 @@ export default function Home() {
           <CallToActionSection />
         </div>
         <OtherToolsSection />
+        <div className="h-[100vh]"></div>
       </VSpace>
     </main>
   );

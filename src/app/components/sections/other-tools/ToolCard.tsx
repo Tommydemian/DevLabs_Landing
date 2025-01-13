@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { FeatureHeading } from "../features/FeatureHeading";
 import { FeatureDescription } from "../features/FeatureDescription";
 import { FeatureCTA } from "../features/FeatureCTA";
@@ -19,7 +18,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool }) => {
   const taskBoard = id === 1;
   const calendar = id === 2;
   return (
-    <article className="flex flex-col items-center justify-between md:flex-row">
+    <article className="flex flex-col items-start justify-between gap-y-20 md:flex-row">
       <div className="space-y-2">
         <FeatureHeading className="md:mb-4">{title}</FeatureHeading>
         <FeatureDescription className="!max-w-[26ch] text-s-15 leading-6 md:!max-w-[52ch] md:text-m-16">
@@ -30,7 +29,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool }) => {
       <div>
         <ToolImagGreenBg>
           {taskBoard
-            ? Array.from({ length: 3 }).map((_, index) => (
+            ? [0, 1, 2].map((_, index) => (
                 <TaskCard key={index} index={index} />
               ))
             : calendar

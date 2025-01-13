@@ -3,6 +3,7 @@ import { SectionHeading } from "../../ui/SectionHeading";
 import { Container } from "../../ui/Container";
 import { VSpace } from "../../ui/VSpace";
 import { ToolCard } from "./ToolCard";
+import { ProgressBar } from "./ProgressBar";
 // Data
 import { otherTools } from "@/data/otherTools";
 
@@ -16,10 +17,13 @@ export const OtherToolsSection = () => {
           <SectionHeading className="hidden md:flex">
             Other Tools
           </SectionHeading>
-          <div className="grid grid-cols-1 gap-11 gap-y-10 md:p-section-block">
-            {otherTools.map((tool) => (
-              <ToolCard tool={tool} key={tool.title} />
-            ))}
+          <div className="debug tools-grid-wrapper relative gap-x-7 md:p-section-block">
+            <ProgressBar />
+            <div className="flex flex-col items-center space-y-12 md:block">
+              {otherTools.map((tool) => (
+                <ToolCard tool={tool} key={tool.title} />
+              ))}
+            </div>
           </div>
         </VSpace>
       </Container>

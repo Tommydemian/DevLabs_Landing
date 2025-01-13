@@ -10,10 +10,11 @@ export default {
     fontSize: {
       micro: ["var(--fs-micro)", { lineHeight: "1.2" }],
       xs: ["var(--fs-xs)", { lineHeight: "1.063rem" }],
-      "s-15": ["var(--fs-s-15)]", { lineHeight: "2rem" }],
+      "s-15": ["var(--fs-s-15)", { lineHeight: "2rem" }],
       "m-16": ["1rem", { lineHeight: "1.438rem" }],
-      "m-20": ["var(--fs-m-20)]", { lineHeight: "2rem" }],
-      "m-22": ["var(--fs-m-22)]", { lineHeight: "1.625rem" }],
+      "m-20": ["var(--fs-m-20)", { lineHeight: "2rem" }],
+      "m-22": ["var(--fs-m-22)", { lineHeight: "1.625rem" }],
+      "lg-40": ["var(--fs-lg-40)", { lineHeight: "1" }],
 
       // Semantic
       "btn-desktop": ["var(--fs-m-20)", { lineHeight: "1.513rem" }],
@@ -57,6 +58,7 @@ export default {
           80: "hsla(0, 0%, 93%, 0.8)",
           60: "hsla(0, 0%, 93%, 0.6)",
         },
+        "progress-bar-point": "var(--color-progress-bar-point)",
       },
       backgroundImage: {
         "link-gradient":
@@ -79,6 +81,7 @@ export default {
       borderRadius: {
         button: "var(--br-button)",
         "nav-wrapper": "var(--br-nav-wrapper)",
+        "tool-green-bg": "var(--br-md)",
       },
       boxShadow: {
         "task-card": "0 4px 4px 0 #00000040",

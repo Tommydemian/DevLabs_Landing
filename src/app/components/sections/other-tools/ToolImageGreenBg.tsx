@@ -8,7 +8,7 @@ export const ToolImagGreenBg: React.FC<ToolImagGreenBgProps> = ({
   children,
 }) => {
   return (
-    <div className="debug relative flex h-[264.16px] w-[298.69px] items-center justify-center rounded-[18px] bg-image-background">
+    <div className="rounded-tool-green-bg relative flex h-[163.98px] w-[277.43px] items-center justify-center bg-image-background md:h-[264.16px] md:w-[298.69px]">
       {children}
     </div>
   );

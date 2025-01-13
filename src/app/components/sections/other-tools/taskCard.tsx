@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { motion } from "motion/react";
 import {
   Calendar,
   Mail,
@@ -14,18 +16,36 @@ type TaskCardProps = {
 };
 
 export const TaskCard: React.FC<TaskCardProps> = ({ index }) => {
-  console.log(index);
   return (
-    <article
+    <motion.article
+      initial={{
+        rotate: "0deg",
+        scale: 0,
+        y: 0,
+      }}
+      whileInView={{
+        rotate: "360deg",
+        scale: 1,
+        y: [0, 150, -150, -150, 0], // Keyframes
+      }}
+      exit={{
+        rotate: "0deg",
+      }}
+      transition={{
+        duration: "2.5",
+        repeat: 10,
+        repeatType: "reverse", // goes 0 -> 360 -> 0
+        ease: "backInOut",
+        times: [0, 0.5, 1, 1.5, 2, 2.5],
+      }}
       className={cn(
-        "absolute left-[5%] h-[126px] rounded-[10px] p-3 text-micro text-heading-primary shadow-task-card",
-        index === 0 && "z-30 w-[358px] bg-surface-task-card",
-        index === 1 && "bg-surface-task-card-80 top-[36.5%] z-20 w-[345.88px]",
+        "absolute left-[5%] h-[113.71px] rounded-[10px] p-3 text-micro text-heading-primary shadow-task-card md:h-[126px]",
+        index === 0 && "z-30 w-[306.27px] bg-surface-task-card md:w-[358px]",
+        index === 1 && "top-[36.5%] z-20 w-[345.88px] bg-surface-task-card-80",
         index === 2 &&
-          "bg-surface-task-card-60 top-[49%] z-10 h-[118.92px] w-[339.59px]",
+          "top-[49%] z-10 h-[118.92px] w-[339.59px] bg-surface-task-card-60",
       )}
     >
-      {/* Top row: title + more options */}
       <h3 className="ml-8 text-[0.75rem] font-semibold leading-[14.52px]">
         Test
       </h3>
@@ -75,6 +95,6 @@ export const TaskCard: React.FC<TaskCardProps> = ({ index }) => {
           </div>
         </div>
       </div>
-    </article>
+    </motion.article>
   );
 };

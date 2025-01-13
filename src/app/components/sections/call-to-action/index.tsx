@@ -6,12 +6,15 @@ import Image from "next/image";
 
 export const CallToActionSection = () => {
   return (
-    <section className="relative rounded-full bg-surface-secondary md:rounded-none">
+    <section className="relative rounded-full bg-surface-secondary p-4 md:rounded-none">
       <Container>
         <VSpace>
           <div className="flex flex-col items-center justify-between gap-y-4 md:flex-row">
             <div className="order-2 space-y-4 text-center">
-              <SectionHeading className="max-w-[13ch] md:max-w-[17ch]">
+              <SectionHeading
+                biggerText
+                className="text-lg-40 max-w-[12ch] md:max-w-[17ch]"
+              >
                 You’ve got this, and we’ve got your back.
               </SectionHeading>
               <button>Contact us</button>
